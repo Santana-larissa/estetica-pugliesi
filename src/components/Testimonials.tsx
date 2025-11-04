@@ -24,7 +24,7 @@ export const Testimonials = () => {
     <section id="testimonials" className="py-24 bg-gradient-to-b from-soft-bg to-background">
       <div className="container">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl font-bold mb-4">O que Dizem Nossos Pacientes</h2>
+          <h2 className="text-4xl font-bold mb-4">O que dizem nossos pacientes?</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Depoimentos reais de quem confia no nosso trabalho
           </p>

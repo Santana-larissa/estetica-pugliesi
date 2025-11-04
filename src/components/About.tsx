@@ -30,7 +30,7 @@ export const About = () => {
           <div className="space-y-6">
             <div>
               <h3 className="text-3xl font-bold text-foreground">Dra. Suellen Pugliesi</h3>
-              <p className="mt-1 text-lg font-semibold text-orange-500">
+              <p className="mt-1 text-lg font-semibold text-dark-dark">
                 Especialista em Estética Avançada e Tratamento do Melasma
               </p>
             </div>
@@ -47,7 +47,7 @@ export const About = () => {
               <CardContent className="p-6">
                 <blockquote className="text-xl font-semibold leading-relaxed text-foreground">
                   <span className="block">
-                    “Independente da circunstência, a resiliência conquistada com muito esforço pode levá-lo a diante.”
+                    “Independente da circunstância, a resiliência conquistada com muito esforço pode levá-lo a diante.”
                   </span>
                   <footer className="mt-3 text-sm font-normal text-muted-foreground">
                     — Dra. Suellen Pugliesi

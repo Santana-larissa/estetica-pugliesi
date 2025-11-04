@@ -17,7 +17,11 @@ export const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container flex h-20 items-center justify-between">
         <a href="#home" className="flex items-center space-x-2">
-          <img src={logo} alt="Estética Pugliesi" className="h-14 w-auto" />
+
+          <img src="https://ik.imagekit.io/logoempregadev/eff68824-087a-4704-8f5e-8ad9b40833c4-removebg-preview.png?updatedAt=1762286598518"
+            alt="Estética Pugliesi"
+            className="h-20 w-auto object-contain drop-shadow-lg"
+          />
         </a>
 
         {/* Desktop Navigation */}

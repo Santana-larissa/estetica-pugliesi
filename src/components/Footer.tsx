@@ -57,7 +57,7 @@ export const Footer = () => {
                   href="mailto:contato@esteticapugliesi.com.br"
                   className="hover:underline"
                 >
-                  contato@esteticapugliesi.com.br
+                  esteticapugliesi@gmail.com
                 </a>
               </li>
             </ul>
