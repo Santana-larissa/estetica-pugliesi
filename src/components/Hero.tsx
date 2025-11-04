@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-spa.jpg";
 
 const doctorPhoto =
-  "https://ik.imagekit.io/logoempregadev/Design%20sem%20nome%20(4).png?updatedAt=1762286562880";
+  "https://ik.imagekit.io/logoempregadev/ChatGPT%20Image%204%20de%20nov.%20de%202025,%2017_18_30.png?updatedAt=1762287523153";
 
 export const Hero = () => {
   return (
