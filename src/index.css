@@ -17,44 +17,44 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 15%;
 
-    /* Medical Trust Blue */
-    --primary: 210 80% 55%;
+    /* Elegant Lilac */
+    --primary: 270 50% 60%;
     --primary-foreground: 0 0% 100%;
 
-    /* Elegant Gold from logo */
-    --secondary: 42 45% 60%;
-    --secondary-foreground: 240 10% 15%;
+    /* Soft Rose Gold */
+    --secondary: 340 40% 70%;
+    --secondary-foreground: 270 10% 15%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 240 5% 45%;
+    --muted: 270 30% 96%;
+    --muted-foreground: 270 5% 45%;
 
     /* Soft accent */
-    --accent: 210 40% 96%;
-    --accent-foreground: 240 10% 15%;
+    --accent: 270 30% 95%;
+    --accent-foreground: 270 10% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 210 80% 55%;
+    --border: 270 25% 90%;
+    --input: 270 25% 90%;
+    --ring: 270 50% 60%;
 
     --radius: 0.75rem;
     
     /* Custom design tokens */
-    --gold: 42 45% 60%;
-    --gold-foreground: 240 10% 15%;
+    --gold: 340 40% 70%;
+    --gold-foreground: 270 10% 15%;
     
-    --trust-blue: 210 80% 55%;
-    --soft-bg: 210 40% 98%;
+    --trust-blue: 270 50% 60%;
+    --soft-bg: 270 30% 98%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(210 80% 55% / 0.1), hsl(42 45% 60% / 0.1));
-    --gradient-accent: linear-gradient(90deg, hsl(210 80% 55%), hsl(210 80% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(270 50% 60% / 0.1), hsl(340 40% 70% / 0.1));
+    --gradient-accent: linear-gradient(90deg, hsl(270 50% 60%), hsl(270 50% 70%));
     
     /* Shadows */
-    --shadow-soft: 0 2px 20px hsl(210 40% 60% / 0.08);
-    --shadow-medium: 0 4px 30px hsl(210 40% 50% / 0.12);
+    --shadow-soft: 0 2px 20px hsl(270 40% 60% / 0.08);
+    --shadow-medium: 0 4px 30px hsl(270 40% 50% / 0.12);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -86,30 +86,30 @@ All colors MUST be HSL.
     --popover: 240 10% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 210 80% 60%;
+    --primary: 270 50% 65%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 42 45% 55%;
+    --secondary: 340 40% 65%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 240 10% 18%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 270 10% 18%;
+    --muted-foreground: 270 5% 65%;
 
-    --accent: 240 10% 18%;
+    --accent: 270 10% 18%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 10% 20%;
-    --input: 240 10% 20%;
-    --ring: 210 80% 60%;
+    --border: 270 10% 20%;
+    --input: 270 10% 20%;
+    --ring: 270 50% 65%;
     
-    --gold: 42 45% 55%;
+    --gold: 340 40% 65%;
     --gold-foreground: 0 0% 100%;
     
-    --trust-blue: 210 80% 60%;
-    --soft-bg: 240 10% 15%;
+    --trust-blue: 270 50% 65%;
+    --soft-bg: 270 10% 15%;
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
