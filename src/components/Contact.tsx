@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
+import { MessageCircle, Phone, Mail, MapPin, AlertCircle } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -47,9 +47,12 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-muted/30">
-      <div className="container">
-        <div className="text-center mb-16">
+    <section id="contact" className="py-24 bg-gradient-to-b from-background to-soft-bg relative overflow-hidden">
+      {/* Decorative gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/5 to-transparent pointer-events-none" />
+      
+      <div className="container relative">
+        <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl font-bold mb-4">Agende Sua Avaliação</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Entre em contato para iniciar seu tratamento personalizado de melasma
@@ -57,7 +60,7 @@ export const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          <Card>
+          <Card variant="elevated">
             <CardHeader>
               <CardTitle>Preencha o Formulário</CardTitle>
               <CardDescription>
@@ -74,6 +77,7 @@ export const Contact = () => {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="Seu nome"
+                    className="transition-all duration-300 focus:scale-[1.02]"
                   />
                 </div>
                 
@@ -86,6 +90,7 @@ export const Contact = () => {
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="(11) 99999-9999"
+                    className="transition-all duration-300 focus:scale-[1.02]"
                   />
                 </div>
                 
@@ -97,6 +102,7 @@ export const Contact = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="seu@email.com"
+                    className="transition-all duration-300 focus:scale-[1.02]"
                   />
                 </div>
                 
@@ -108,6 +114,7 @@ export const Contact = () => {
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Conte um pouco sobre seu caso ou suas dúvidas"
                     rows={4}
+                    className="transition-all duration-300 focus:scale-[1.02]"
                   />
                 </div>
 
@@ -131,7 +138,7 @@ export const Contact = () => {
                   </label>
                 </div>
 
-                <Button type="submit" size="lg" className="w-full">
+                <Button type="submit" size="lg" className="w-full hover:scale-105 transition-transform">
                   Enviar Mensagem
                 </Button>
               </form>
@@ -139,17 +146,17 @@ export const Contact = () => {
           </Card>
 
           <div className="space-y-6">
-            <Card className="bg-primary text-primary-foreground">
+            <Card variant="elevated" className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground border-none group hover:scale-[1.02] transition-all">
               <CardContent className="p-8 text-center">
-                <MessageCircle className="h-12 w-12 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold mb-2">Atendimento Rápido</h3>
-                <p className="mb-6 opacity-90">
+                <MessageCircle className="h-14 w-14 mx-auto mb-4 group-hover:animate-float" />
+                <h3 className="text-2xl font-bold mb-3">Atendimento Rápido</h3>
+                <p className="mb-6 opacity-95 leading-relaxed">
                   Prefere falar diretamente? Entre em contato via WhatsApp agora!
                 </p>
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="w-full"
+                  className="w-full hover:scale-105 transition-transform"
                   onClick={handleWhatsAppDirect}
                 >
                   <MessageCircle className="mr-2 h-5 w-5" />
@@ -158,41 +165,45 @@ export const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card>
-              <CardContent className="p-6 space-y-4">
-                <div className="flex items-start gap-3">
-                  <Phone className="h-5 w-5 text-primary mt-1" />
-                  <div>
-                    <p className="font-semibold">Telefone</p>
-                    <p className="text-muted-foreground">(11) 99999-9999</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <Mail className="h-5 w-5 text-primary mt-1" />
-                  <div>
-                    <p className="font-semibold">E-mail</p>
-                    <p className="text-muted-foreground">contato@esteticapugliesi.com.br</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-primary mt-1" />
-                  <div>
-                    <p className="font-semibold">Endereço</p>
-                    <p className="text-muted-foreground">
-                      Rua Exemplo, 123 - Bairro<br />
-                      São Paulo - SP
-                    </p>
-                  </div>
-                </div>
+            <Card variant="glass">
+              <CardContent className="p-6 space-y-5">
+                {[
+                  { icon: Phone, label: "Telefone", value: "(11) 99999-9999" },
+                  { icon: Mail, label: "E-mail", value: "contato@esteticapugliesi.com.br" },
+                  { 
+                    icon: MapPin, 
+                    label: "Endereço", 
+                    value: "Rua Exemplo, 123 - Bairro\nSão Paulo - SP" 
+                  },
+                ].map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div 
+                      key={index} 
+                      className="flex items-start gap-4 p-3 rounded-lg hover:bg-background/50 transition-colors"
+                    >
+                      <div className="p-2 rounded-lg bg-gradient-to-br from-primary/20 to-primary/5">
+                        <Icon className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-semibold mb-1">{item.label}</p>
+                        <p className="text-muted-foreground text-sm whitespace-pre-line">
+                          {item.value}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
               </CardContent>
             </Card>
 
-            <Card className="bg-muted/50">
+            <Card variant="glass" className="border-secondary/30">
               <CardContent className="p-6">
-                <h4 className="font-semibold mb-2 text-sm">⚠️ Importante</h4>
-                <p className="text-sm text-muted-foreground">
+                <h4 className="font-semibold mb-3 text-sm flex items-center gap-2">
+                  <AlertCircle className="h-4 w-4 text-secondary" />
+                  Importante
+                </h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Este formulário é apenas para agendamento e informações gerais. 
                   Não utilize para compartilhar informações médicas sensíveis. 
                   Diagnóstico e prescrição são feitos exclusivamente em consulta.

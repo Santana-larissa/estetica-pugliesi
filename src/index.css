@@ -55,9 +55,11 @@ All colors MUST be HSL.
     /* Shadows */
     --shadow-soft: 0 2px 20px hsl(270 40% 60% / 0.08);
     --shadow-medium: 0 4px 30px hsl(270 40% 50% / 0.12);
+    --shadow-glow: 0 8px 40px hsl(270 40% 50% / 0.15);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -129,5 +131,20 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .animate-on-scroll {
+    opacity: 0;
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+  
+  .bg-gradient-soft {
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.05), hsl(var(--secondary) / 0.05));
   }
 }
